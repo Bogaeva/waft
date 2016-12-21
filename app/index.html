@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" ng-app="waft">
+    <head>
+        <meta charset="utf-8">
+        <title>Waft - Personalised Perfume</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Muli:300i|Oswald|Pacifico" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css">
+        <link rel="stylesheet" href="style.css" />
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="bottleName">
+
+        <div class="">
+            <header class="header">
+                <div class="header-top">
+                    <div class="container clearfix">
+                        <div class="mobile-menu" toggle-class="open">
+                            <span></span>
+                        </div>
+                        <div class="logo-wrap">
+                            <a href="#">
+                                <img src="img/logo.jpg" width="137" height="34" alt="">
+                            </a>
+                        </div>
+
+                        <ul class="header-list">
+                            <li>
+                                <span>
+                                    scent name
+                                </span>
+                                <span>
+                                    Untitled
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    based on
+                                </span>
+                                <span>
+                                    Jimmy Choo Man
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="wrap-user">
+                            <img src="img/user.svg" width="50" height="50" alt="">
+                        </div>
+                    </div>                    
+                </div>
+
+                <div>
+                    <div class="container clearfix">
+                        <div class="header-col">
+                            <a href="#" class="icon-arrow-left">
+                                <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+                            </a>
+                            Customise
+                        </div>
+
+                        <div class="header-col caption">
+                            As seasons develop, so does your taste. We want to know how you feel, when you feel it and which season makes you feel at your best.
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="container clearfix">
+
+                    <div class="col col-push">
+
+                        <h2>
+                            name your fragrance
+                        </h2>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                        </p>
+
+                        <h1>
+                            Give your fragrance a personal touch
+                        </h1>
+
+                        <div class="form-control">
+                            <input type="text" name="input" ng-model="example.text" placeholder="Enter name">
+                        </div>
+
+                        <dropdown placeholder="Select font" list="fontTypes" selected="fontType" property="name"></dropdown>
+
+                        <div>
+                            <a class="btn form-control" href="#">
+                                continue
+                            </a>
+                        </div>
+                        <div>
+                            <a class="link-skip" href="#">
+                                no thanks, skip
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col col-pull">
+                        <p class="bottle-name" style="font-family: {{fontType.family}}">
+                          {{example.text | limitTo: 20}}{{example.text.length > 20 ? '...' : ''}}
+                        </p>
+                        <img src="img/bottle.jpg" alt="">
+                    </div>
+
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <p class="copyright-text">
+                        Copyright &#169; 2016 WaftLabs. All Rights Reserved.
+                    </p>
+
+                    <img src="img/w.jpg" class="footer-img">
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">
+                                How It Works
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                FAQs
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Terms
+                            </a>
+                        </li>
+                    </ul>
+                </div>                
+            </footer>
+        </div>
+    </body>
+</html>

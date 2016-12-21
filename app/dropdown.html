@@ -1,0 +1,18 @@
+<div class="dropdown-container" ng-class="{ show: listVisible }">
+	<div class="dropdown-display form-control" ng-click="show();" ng-class="{ clicked: listVisible }"">
+		<span ng-if="!isPlaceholder" style="font-family: {{display}}">{{display}}</span>
+		<span class="placeholder" ng-if="isPlaceholder">{{placeholder}}</span>
+		<!-- <span class="placeholder">Select font</span> -->
+		<i class="fa fa-angle-down"></i>
+	</div>
+	<div class="dropdown-list">
+		<div>
+			<div class="dropdown-item" ng-repeat="item in list" ng-click="select(item)" ng-class="{ selected: isSelected(item) }"  style="font-family: {{item[property]}}">
+				<span>{{property !== undefined ? item[property] : item}}</span>
+				<span class="icon-wrap">
+					<i class="fa fa-check"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
