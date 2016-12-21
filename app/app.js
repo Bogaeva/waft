@@ -5,8 +5,8 @@ app.controller("bottleName", function($scope) {
       name: "Arial",
       family: "'Arial', sans-serif"
     }, {
-      name: "Muli",
-      family: "'Muli', sans-serif"
+      name: "Mirza",
+      family: "'Mirza', cursive"
     }, {
       name: "Pacifico",
       family: "'Pacifico', cursive"

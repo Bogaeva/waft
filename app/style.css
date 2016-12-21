@@ -229,6 +229,7 @@ main .container {
     top: 35%;
     left: 0;
     right: 0;
+    z-index: 2;
     margin: auto;
     width: 34%;
     max-width: 162px;
@@ -263,7 +264,17 @@ h1 {
 	max-width: 100%;
 	height: auto;
 	max-height: 660px;
-	
+}
+
+.bottle-img {
+	position: relative;
+	z-index: 1;
+}
+
+.drops-img {
+	position: absolute;
+    bottom: 21%;
+    right: 83%;
 }
 
 .form-control {
@@ -303,7 +314,7 @@ dropdown > div > div.dropdown-list {
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     background: #fff;
     color: #585c5f;
@@ -428,6 +439,7 @@ dropdown > div.show > div.dropdown-list {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	z-index: 2;
 	padding: 0 15px;
 	height: 43px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -560,6 +572,14 @@ dropdown > div.show > div.dropdown-list {
 
 	.bottle-name {
 		font-size: 24px;
+	}
+
+	.drops-img {
+		right: 71%;
+	}
+
+	.col-pull {
+		padding-bottom: 0; 
 	}
 
 	.footer {
